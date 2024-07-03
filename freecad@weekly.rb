@@ -1,14 +1,15 @@
-cask "freecad-weekly" do
+cask "freecad@weekly" do
     arch arm: "arm64", intel: "x86_64"
   
     version :latest
     sha256 :no_check
-
+  
     url "https://github.com/FreeCAD/FreeCAD-Bundle/releases/download/weekly-builds/FreeCAD_weekly-builds-38001-conda-macOS-#{arch}-py311.dmg",
         verified: "github.com/FreeCAD/FreeCAD/"
     name "FreeCAD"
     desc "3D parametric modeller"
     homepage "https://www.freecad.org/"
+    license "LGPL-2.1"
   
     # Upstream uses GitHub releases to indicate that a version is released
     # (there's also sometimes a notable gap between the release being created
@@ -28,4 +29,4 @@ cask "freecad-weekly" do
       "~/Library/Preferences/com.freecad.FreeCAD.plist",
       "~/Library/Preferences/FreeCAD",
     ]
-  end
+end
